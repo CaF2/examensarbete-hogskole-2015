@@ -25,10 +25,10 @@ changed: ./Components/hal/target/CC2540EB/hal_mcu.h:
 to
 
 ``
-#define HAL_MCU_LITTLE_ENDIAN()   0
-#define HAL_ISR_FUNC_DECLARATION(f,v)   void f(void) interrupt v
-#define HAL_ISR_FUNC_PROTOTYPE(f,v)     void f(void)
-#define HAL_ISR_FUNCTION(f,v)           HAL_ISR_FUNC_PROTOTYPE(f,v); HAL_ISR_FUNC_DECLARATION(f,v)
+	#define HAL_MCU_LITTLE_ENDIAN()   0
+	#define HAL_ISR_FUNC_DECLARATION(f,v)   void f(void) interrupt v
+	#define HAL_ISR_FUNC_PROTOTYPE(f,v)     void f(void)
+	#define HAL_ISR_FUNCTION(f,v)           HAL_ISR_FUNC_PROTOTYPE(f,v); HAL_ISR_FUNC_DECLARATION(f,v)
 ``
 
 initially used: https://github.com/lee-wei/CC2540 and https://github.com/aanon4/BlueBasic
